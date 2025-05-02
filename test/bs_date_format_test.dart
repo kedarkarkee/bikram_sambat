@@ -1,5 +1,4 @@
-import 'package:bikram_sambat/src/bikram_sambat_date.dart';
-import 'package:bikram_sambat/src/bs_date_format.dart';
+import 'package:bikram_sambat/bikram_sambat.dart';
 import 'package:test/test.dart';
 
 void main() {

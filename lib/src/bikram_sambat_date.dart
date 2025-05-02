@@ -1,3 +1,5 @@
+import 'package:bikram_sambat/src/bs_date_format.dart';
+
 part 'dates.dart';
 
 extension BikramSambatConverter on DateTime {
@@ -409,4 +411,7 @@ class BikramSambat implements DateTime {
       microsecond,
     );
   }
+
+  /// Formats [BikramSambat] as per the pattern provided.
+  String format(BSDateFormat formatter) => formatter.format(this);
 }

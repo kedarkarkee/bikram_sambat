@@ -1,4 +1,5 @@
 import 'package:bikram_sambat/src/bikram_sambat_date.dart';
+import 'package:bikram_sambat/src/bs_date_format.dart';
 
 void main() {
   // BikramSambat class implements `dart:core`'s [DateTime] class to represent Nepali BS Dates
@@ -20,4 +21,35 @@ void main() {
   print('BS Date = $bsDate'); // 2058-08-28 14:15:16.000
   final adDate = bsDate.toDateTime();
   print('AD Date = $adDate'); // 2001-12-13 14:15:16.000
+
+  // Date Format
+  // Format BikramSambat date into human readable form
+  final formattedDate = BikramSambat.now().format(BSDateFormat.yMd());
+  print(formattedDate); // 2082/01/19
+
+  // More formats are available with [BSDateFormat] constructors
+
+  final toFormat = BikramSambat(2082, 1, 19, 21, 21, 23);
+  print(BSDateFormat.yMMMEd().format(toFormat)); // Fri, Bai 19, 2082
+
+  print(BSDateFormat.yMMMEd(BSLanguage.nepali)
+      .format(toFormat)); // शुक्र, बै १९, २०८२
+
+  print(BSDateFormat.yMMMMd()
+      .add_jms()
+      .format(toFormat)); // Baishakh 19, 2082 9:21:23 PM
+
+  print(BSDateFormat.yMMMMd(BSLanguage.nepali)
+      .add_jms()
+      .format(toFormat)); // बैशाख १९, २०८२ बेलुकी ९:२१:२३
+
+  /// You can also provide default format language as
+  ///
+  /// ``` dart
+  /// BSDateFormat.defaultLanguage = BSLanguage.nepali;
+  /// ```
+  ///
+  BSDateFormat.defaultLanguage = BSLanguage.nepali;
+
+  print(BSDateFormat.MMMMd().format(toFormat)); // बैशाख १९
 }

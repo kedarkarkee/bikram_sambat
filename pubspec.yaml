@@ -1,6 +1,6 @@
 name: bikram_sambat
 description: A dart package that handles working with Nepali Bikram Sambat dates
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/kedarkarkee/bikram_sambat
 repository: https://github.com/kedarkarkee/bikram_sambat.git
 issue_tracker: https://github.com/kedarkarkee/bikram_sambat/issues

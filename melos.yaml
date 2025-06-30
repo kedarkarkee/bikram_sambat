@@ -3,6 +3,7 @@ repository: https://github.com/kedarkarkee/bikram_sambat
 
 packages:
   - bikram_sambat
+  - bikram_sambat_date_picker
 
 scripts:
   check_format:

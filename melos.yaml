@@ -3,3 +3,17 @@ repository: https://github.com/kedarkarkee/bikram_sambat
 
 packages:
   - bikram_sambat
+
+scripts:
+  check_format:
+    run: dart format -o none --set-exit-if-changed .
+
+  analyze:
+    run: dart analyze --fatal-infos
+    exec: { concurrency: 1 }
+
+  test:
+    run: dart test
+    exec: { concurrency: 1 }
+    packageFilters:
+      dependsOn: test

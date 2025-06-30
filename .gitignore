@@ -1,0 +1,17 @@
+**/.idea
+**/*.iml
+
+.packages
+*/**/pubspec.lock
+.dart_tool/
+
+.flutter-plugins
+.flutter-plugins-dependencies
+flutter_export_environment.sh
+.DS_Store
+
+*/build/
+**/pubspec_overrides.yaml
+**.history/
+
+.zed/

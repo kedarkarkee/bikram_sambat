@@ -1,0 +1,5 @@
+name: bikram_sambat
+repository: https://github.com/kedarkarkee/bikram_sambat
+
+packages:
+  - bikram_sambat
